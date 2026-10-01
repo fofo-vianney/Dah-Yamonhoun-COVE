@@ -2,3 +2,23 @@
 
 /* Portrait du maître guérisseur dans la partie supérieure */
 .portrait-wrap{position:relative;max-width:470px;margin:0 auto;align-self:center;padding:12px;border:1px solid #c99b4b;background:#1b3327;box-shadow:0 20px 50px #0003}.portrait{display:block;width:100%;height:auto;max-height:600px;object-fit:cover;object-position:center top}.portrait-caption{background:#1b3327;color:#f7e8c6;text-align:center;padding:14px 8px 8px;font:18px Georgia;letter-spacing:1px}.portrait-caption span{display:block;color:#d9b76f;font:11px "DM Sans",sans-serif;letter-spacing:1.2px;margin-top:5px}.heroGrid{grid-template-columns:1.05fr .95fr}@media(max-width:620px){.portrait-wrap{max-width:420px;width:100%;margin:8px auto 0}.portrait{max-height:520px;object-fit:cover;object-position:center top}.portrait-caption{font-size:16px}}
+
+
+/* Correction responsive mobile : empêcher le portrait d'élargir toute la page */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+main{width:100%;max-width:100%;overflow:hidden}
+.heroGrid{width:min(1120px,calc(100% - 40px));grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+.heroGrid>*{min-width:0}
+.portrait-wrap{width:100%;min-width:0;max-width:100%;overflow:hidden}
+.portrait{width:100%;max-width:100%;height:auto;object-fit:contain}
+@media(max-width:620px){
+.heroGrid{width:100%;display:flex;flex-direction:column;gap:0;padding:0 0 28px}
+.portrait-wrap{order:0;width:100%;max-width:100%;margin:0 0 30px;padding:0;border:0;border-bottom:1px solid #c99b4b;box-shadow:none}
+.portrait{display:block;width:100%;max-width:100%;height:auto;max-height:none;object-fit:contain;object-position:center}
+.portrait-caption{padding:12px 10px 14px;font-size:16px}
+.heroGrid>div:first-child{order:1;width:100%;padding:0 17px}
+.hero{padding-top:0}
+.hero h1{font-size:clamp(38px,11vw,46px);overflow-wrap:break-word}
+.hero p{overflow-wrap:break-word}
+.ticker{padding:14px 12px;line-height:1.8}
+}
