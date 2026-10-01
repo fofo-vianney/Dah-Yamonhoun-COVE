@@ -22,3 +22,21 @@ main{width:100%;max-width:100%;overflow:hidden}
 .hero p{overflow-wrap:break-word}
 .ticker{padding:14px 12px;line-height:1.8}
 }
+
+
+/* Cartes de prestations mises en valeur, dans l'esprit d'une vitrine */
+.all-services{display:inline-block;color:#d9b76f;font-weight:700;font-size:18px;margin:0 0 26px}
+.service-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px}
+.service-feature{min-width:0;overflow:hidden;border:1px solid #ffffff24;border-radius:24px;background:#182b22}
+.service-art{min-height:185px;background:linear-gradient(135deg,#c99b4b,#6b5129);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;color:#fff3d1}
+.service-art svg{width:46px;height:46px;stroke-width:1.4}
+.service-art span{font-size:10px;letter-spacing:2px;font-weight:700}
+.service-art.art-two{background:linear-gradient(135deg,#52684b,#233d30)}
+.service-art.art-three{background:linear-gradient(135deg,#a77c38,#4b5639)}
+.service-info{padding:22px}
+.service-info>small{font-size:10px;letter-spacing:1.5px;color:#d9b76f}
+.service-info h3{font:25px/1.25 "Playfair Display",Georgia,serif;margin:12px 0}
+.service-info p{font-size:14px;line-height:1.8;color:#cbd4c7;min-height:98px}
+.service-info>a{display:inline-block;color:#d9b76f;font-size:13px;font-weight:700;margin-top:6px}
+@media(max-width:800px){.service-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.all-services{font-size:18px;margin-bottom:24px}.service-showcase{grid-template-columns:1fr;gap:22px}.service-art{min-height:170px}.service-info{padding:22px}.service-info p{min-height:0}.service-info h3{font-size:26px}}
