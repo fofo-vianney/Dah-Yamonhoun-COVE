@@ -40,3 +40,41 @@ main{width:100%;max-width:100%;overflow:hidden}
 .service-info>a{display:inline-block;color:#d9b76f;font-size:13px;font-weight:700;margin-top:6px}
 @media(max-width:800px){.service-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.all-services{font-size:18px;margin-bottom:24px}.service-showcase{grid-template-columns:1fr;gap:22px}.service-art{min-height:170px}.service-info{padding:22px}.service-info p{min-height:0}.service-info h3{font-size:26px}}
+
+
+/* Page catalogue des produits */
+.products-page{min-height:100vh;background:#f8f4eb;color:#20271f;padding-bottom:50px}
+.products-header{background:#fffdf8;border-bottom:1px solid #e8e0d2}
+.products-nav{width:min(1120px,calc(100% - 40px));min-height:76px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.products-brand{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:1.5px}
+.products-brand-mark{background:#233d30;color:#f5d99e;padding:7px 14px;font:28px Georgia}
+.products-brand small{display:block;font-size:10px;letter-spacing:0;color:#777;font-weight:400}
+.back-home{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#314b39}
+.products-intro{max-width:780px;margin:0 auto;text-align:center;padding:65px 22px 35px}
+.products-kicker{color:#926b2f;font-size:10px;font-weight:700;letter-spacing:2px}
+.products-intro h1{font:500 clamp(36px,5vw,54px)/1.15 "Playfair Display",Georgia,serif;margin:18px 0}
+.products-intro h1 em{color:#a77c38}
+.products-intro p{color:#687065;max-width:590px;margin:0 auto}
+.product-list{width:min(980px,calc(100% - 40px));margin:0 auto}
+.product-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);overflow:hidden;border:1px solid #e5dac6;border-radius:22px;background:#fffdf8;box-shadow:0 16px 45px #253c2b12}
+.product-photo-placeholder{min-height:440px;background:linear-gradient(145deg,#eee6d5,#e1d4bb);border-right:1px solid #e5dac6;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;text-align:center;padding:25px;color:#52604e}
+.product-photo-placeholder svg{color:#a77c38}
+.product-photo-placeholder strong{font:25px "Playfair Display",Georgia,serif;color:#314b39}
+.product-photo-placeholder span{font-size:13px}
+.product-photo-placeholder small{font-size:10px;color:#74786c;overflow-wrap:anywhere}
+.product-photo-placeholder code{font-size:10px;background:#ffffffa8;padding:3px 5px;border-radius:4px}
+.product-details{padding:35px 32px}
+.product-number{font-size:10px;letter-spacing:1.5px;font-weight:700;color:#926b2f}
+.product-details h2{font-size:38px;margin:13px 0 6px;color:#233d30}
+.product-subtitle{font-weight:700;color:#66705f;margin:0 0 24px}
+.product-description p{font-size:14px;line-height:1.85;color:#626a5e}
+.product-description .product-claim{border-left:3px solid #c99b4b;padding-left:13px;color:#495445}
+.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid #e8e0d2;padding-top:22px;margin-top:24px}
+.price-label{display:block;font-size:11px;color:#777}
+.product-price{display:block;font-size:25px;color:#233d30}
+.product-contact{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#233d30;color:#fff9ed;padding:12px 15px;font-size:12px;font-weight:700;border-radius:3px}
+.product-note{font-size:11px;line-height:1.7;color:#77786f;margin-top:22px}
+.products-footer{width:min(980px,calc(100% - 40px));margin:36px auto 0;display:flex;justify-content:space-between;gap:15px;font-size:11px;color:#697166}
+.products-footer span{font-weight:700;letter-spacing:1px}
+.products-footer a{color:#926b2f;font-weight:700}
+@media(max-width:700px){.products-nav{width:calc(100% - 30px);min-height:70px}.products-brand{font-size:10px;letter-spacing:1px}.products-brand-mark{font-size:24px;padding:6px 11px}.back-home{font-size:11px}.products-intro{padding:45px 20px 28px}.product-list{width:calc(100% - 28px)}.product-card{grid-template-columns:1fr}.product-photo-placeholder{min-height:280px;border-right:0;border-bottom:1px solid #e5dac6}.product-details{padding:27px 22px}.product-details h2{font-size:34px}.product-bottom{align-items:flex-start;flex-direction:column}.product-contact{width:100%}.products-footer{width:calc(100% - 30px)}}
