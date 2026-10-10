@@ -8,7 +8,7 @@ const whatsapp = "https://chat.whatsapp.com/Dy7lky6MPzMCQun95YKOyc?s=cl&p=a&ilr=
 
 const prestations = [
   { id: "consultation", category: "ACCOMPAGNEMENT", group: "Accompagnement", title: "Consultation spirituelle", description: "", price: "", usage: "", icon: Compass, label: "ÉCOUTE & ÉCHANGE" },
-  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon DJOGBÉ", description: "Savon composé à base de connaissances traditionnelles ancestrales, conçu pour raviver votre chance.", price: "60 000 FCFA", usage: "Faire ses vœux avant de se laver avec le savon, tous les lundis matin et tous les vendredis matin, afin de voir ses vœux exaucés.", icon: Leaf, label: "SAVON DJOGBÉ" },
+  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon de chances", description: "Savon composé à base de connaissances traditionnelles ancestrales, conçu pour raviver votre chance.", price: "60 000 FCFA", usage: "Faire ses vœux avant de se laver avec le savon, tous les lundis matin et tous les vendredis matin, afin de voir ses vœux exaucés.", icon: Leaf, label: "SAVON DE CHANCES" },
 ];
 
 export default function PrestationsPage() {
@@ -57,7 +57,7 @@ export default function PrestationsPage() {
                 <article className="services-catalog-card" key={item.id}>
                   <div className={`services-catalog-art services-catalog-art-${(index % 3) + 1}`}>
                     <span className="services-catalog-number">{String(index + 1).padStart(2, "0")}</span>
-                    <Icon size={43} strokeWidth={1.35} />
+                    {item.id === "savon-djogbe" ? <img src="/savon-de-chances.jpg" alt={item.title} style={{ width: "100%", height: "100%", objectFit: "contain", padding: "18px" }} /> : <Icon size={43} strokeWidth={1.35} />}
                     <span className="services-catalog-art-label">{item.label}</span>
                   </div>
                   <div className="services-catalog-card-body">
