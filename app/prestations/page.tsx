@@ -9,6 +9,7 @@ const whatsapp = "https://chat.whatsapp.com/Dy7lky6MPzMCQun95YKOyc?s=cl&p=a&ilr=
 const prestations = [
   { id: "consultation", category: "ACCOMPAGNEMENT", group: "Accompagnement", title: "Consultation spirituelle", description: "", price: "", usage: "", icon: Compass, label: "ÉCOUTE & ÉCHANGE" },
   { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon de chances", description: "Savon composé à base de connaissances traditionnelles ancestrales, conçu pour raviver votre chance.", price: "60 000 FCFA", usage: "Faire ses vœux avant de se laver avec le savon, tous les lundis matin et tous les vendredis matin, afin de voir ses vœux exaucés.", icon: Leaf, label: "SAVON DE CHANCES" },
+  { id: "kit-djogbe-parfum-bague", category: "ENSEMBLE TRADITIONNEL", group: "Produits", title: 'Savon « DJOGBÉ » avec parfum et bague préparée', description: "Ensemble traditionnel composé du savon DJOGBÉ, d’un parfum et d’une bague préparée, présenté comme un accompagnement pour raviver la chance et attirer les opportunités financières.", price: "150 000 FCFA", usage: "Pour les informations sur la préparation et le mode d’utilisation, contactez-nous sur WhatsApp.", icon: Sparkles, label: "ENSEMBLE DJOGBÉ" },
 ];
 
 export default function PrestationsPage() {
