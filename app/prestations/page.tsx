@@ -9,7 +9,7 @@ const whatsapp = "https://chat.whatsapp.com/Dy7lky6MPzMCQun95YKOyc?s=cl&p=a&ilr=
 const prestations = [
   { id: "consultation", category: "ACCOMPAGNEMENT", group: "Accompagnement", title: "Consultation spirituelle", description: "", price: "", usage: "", icon: Compass, label: "ÉCOUTE & ÉCHANGE" },
   { id: "traditions", category: "CULTURE & HÉRITAGE", group: "Traditions", title: "Traditions ancestrales", description: "", price: "", usage: "", icon: Sparkles, label: "HÉRITAGE VIVANT" },
-  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon DJOGBÉ", description: "", price: "", usage: "", icon: Leaf, label: "FICHE À COMPLÉTER" },
+  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon DJOGBÉ", description: "", price: "", usage: "Faire ses vœux avant de se laver avec le savon, tous les lundis matin et tous les vendredis matin, afin de voir ses vœux exaucés.", icon: Leaf, label: "SAVON DJOGBÉ" },
   { id: "protection", category: "TRADITIONS", group: "Accompagnement", title: "Protection symbolique", description: "", price: "", usage: "", icon: ShieldCheck, label: "SYMBOLES & TRADITIONS" },
 ];
 
