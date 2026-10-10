@@ -199,3 +199,13 @@ main{width:100%;max-width:100%;overflow:hidden}
 .services-catalog-card p{min-height:0}
 .services-catalog-contact{padding:15px 13px}
 }
+
+
+/* Champs à compléter pour chaque fiche prestation */
+.service-description{min-height:0!important;margin-bottom:18px}
+.service-detail-placeholder{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 13px;margin-top:14px;border:1px solid #465448;background:#122019;color:#d6dfd7}
+.service-detail-placeholder span{font-size:12px;color:#b9c6ba;text-transform:uppercase;letter-spacing:1px}
+.service-detail-placeholder strong{font-size:15px;color:#e3c47b;white-space:nowrap}
+.service-usage{margin-top:12px;padding:14px 13px;border-left:2px solid #c99b4b;background:#1d2c23}
+.service-usage strong{font-size:12px;color:#e3c47b;letter-spacing:.4px}
+.service-usage p{min-height:0!important;margin:7px 0 0;font-size:13px;color:#b9c6ba}
