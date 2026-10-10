@@ -148,3 +148,54 @@ main{width:100%;max-width:100%;overflow:hidden}
 .service-info{padding:24px}
 .service-info h3{font-size:27px}
 }
+
+
+/* Catalogue dédié à toutes les prestations */
+.services-catalog-page{background:#111b16;color:#f3f5f0;padding-bottom:28px}
+.services-catalog-page .catalog-header{background:#14241c;border-color:#304238}
+.services-catalog-page .catalog-brand{color:#f4f5ef}
+.services-catalog-page .catalog-brand-text small{color:#b2c0b4}
+.services-catalog-page .catalog-monogram{background:#c99b4b;color:#203126}
+.services-catalog-page .catalog-back{color:#d8e5dc}
+.services-catalog-heading{padding-top:62px;padding-bottom:35px}
+.services-catalog-heading h1{font:700 clamp(38px,7vw,64px)/1.06 "DM Sans",sans-serif;letter-spacing:-2px;color:#f3f7f4}
+.services-catalog-heading h1 em{font-style:normal;color:#8bd2b0}
+.services-catalog-heading p{color:#bac8bf;font-size:16px;line-height:1.8}
+.services-catalog-search{width:min(980px,calc(100% - 44px));min-height:66px;margin:0 auto 32px;display:flex;align-items:center;gap:14px;padding:0 20px;border:1px solid #35483d;border-radius:18px;background:#14221b;color:#9cb4a5}
+.services-catalog-search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#f2f5f1;font:16px "DM Sans",sans-serif}
+.services-catalog-search input::placeholder{color:#8c9d92}
+.services-catalog-search input:focus-visible{outline:0}
+.services-catalog-list{width:min(1080px,calc(100% - 44px));margin:0 auto}
+.services-catalog-count{font-size:12px;color:#9fb5a7;margin:0 0 16px}
+.services-catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.services-catalog-card{min-width:0;overflow:hidden;border:1px solid #34463b;border-radius:23px;background:#17251e;color:#f2f5f1}
+.services-catalog-art{position:relative;min-height:235px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;color:#f4e5c2;background:linear-gradient(135deg,#a77c38,#5b4a2d)}
+.services-catalog-art svg{width:48px;height:48px}
+.services-catalog-art-2{background:linear-gradient(135deg,#536d54,#263f31)}
+.services-catalog-art-3{background:linear-gradient(135deg,#8d713f,#354c3a)}
+.services-catalog-number{position:absolute;top:16px;left:17px;background:#122119;color:#e8c985;padding:7px 10px;font-size:10px;letter-spacing:1px}
+.services-catalog-art-label{font-size:10px;letter-spacing:2px;font-weight:700}
+.services-catalog-card-body{padding:24px}
+.services-catalog-category{font-size:10px;letter-spacing:1.5px;font-weight:700;color:#d7b96f}
+.services-catalog-card h2{font:500 29px/1.2 "Playfair Display",Georgia,serif;color:#f4f5ef;margin:12px 0}
+.services-catalog-card p{font-size:14px;line-height:1.8;color:#bfcbc2;min-height:100px;margin:0}
+.services-catalog-contact{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:23px;padding:14px 15px;background:#c99b4b;color:#1d2c22;font-size:12px;font-weight:700}
+.services-catalog-contact svg:last-child{margin-left:auto}
+.services-catalog-empty{border:1px solid #35483d;border-radius:16px;padding:25px;color:#c4d0c7;background:#14221b}
+.services-catalog-page .catalog-footer{border-color:#304238;color:#a9b8ad}
+.services-catalog-page .catalog-footer span:first-child{color:#e5c77f}
+.services-catalog-page .float{box-shadow:0 8px 25px #0005}
+@media(max-width:620px){
+.services-catalog-heading{padding:42px 20px 27px}
+.services-catalog-heading h1{letter-spacing:-1.5px}
+.services-catalog-heading p{font-size:14px}
+.services-catalog-search{width:calc(100% - 28px);min-height:60px;margin-bottom:25px;padding:0 15px}
+.services-catalog-search input{font-size:14px}
+.services-catalog-list{width:calc(100% - 28px)}
+.services-catalog-grid{grid-template-columns:1fr;gap:20px}
+.services-catalog-art{min-height:245px}
+.services-catalog-card-body{padding:23px}
+.services-catalog-card h2{font-size:28px}
+.services-catalog-card p{min-height:0}
+.services-catalog-contact{padding:15px 13px}
+}
