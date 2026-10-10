@@ -9,7 +9,7 @@ const whatsapp = "https://chat.whatsapp.com/Dy7lky6MPzMCQun95YKOyc?s=cl&p=a&ilr=
 const prestations = [
   { id: "consultation", category: "ACCOMPAGNEMENT", group: "Accompagnement", title: "Consultation spirituelle", description: "", price: "", usage: "", icon: Compass, label: "ÉCOUTE & ÉCHANGE" },
   { id: "traditions", category: "CULTURE & HÉRITAGE", group: "Traditions", title: "Traditions ancestrales", description: "", price: "", usage: "", icon: Sparkles, label: "HÉRITAGE VIVANT" },
-  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon DJOGBÉ", description: "", price: "", usage: "Faire ses vœux avant de se laver avec le savon, tous les lundis matin et tous les vendredis matin, afin de voir ses vœux exaucés.", icon: Leaf, label: "SAVON DJOGBÉ" },
+  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon DJOGBÉ", description: "Savon composé à base de connaissances traditionnelles ancestrales, conçu pour raviver votre chance.", price: "60 000 FCFA", usage: "Faire ses vœux avant de se laver avec le savon, tous les lundis matin et tous les vendredis matin, afin de voir ses vœux exaucés.", icon: Leaf, label: "SAVON DJOGBÉ" },
   { id: "protection", category: "TRADITIONS", group: "Accompagnement", title: "Protection symbolique", description: "", price: "", usage: "", icon: ShieldCheck, label: "SYMBOLES & TRADITIONS" },
 ];
 
@@ -38,7 +38,7 @@ export default function PrestationsPage() {
       <section className="catalog-heading services-catalog-heading">
         <span className="catalog-eyebrow"><i /> CATALOGUE <i /></span>
         <h1>Découvrez nos <em>prestations</em></h1>
-        <p>Parcourez les rubriques, recherchez une prestation et contactez-nous pour obtenir des informations. Les fiches seront complétées avec vos propres contenus.</p>
+        <p>Recherchez une prestation et contactez-nous pour obtenir des informations sur nos services et produits.</p>
       </section>
 
       <section className="services-catalog-search" aria-label="Rechercher une prestation">
@@ -77,7 +77,7 @@ export default function PrestationsPage() {
             })}
           </div>
         ) : (
-          <div className="services-catalog-empty">Aucun résultat pour « {search} » dans cette rubrique. Essayez un autre mot-clé ou choisissez « Toutes ».</div>
+          <div className="services-catalog-empty">Aucun résultat pour « {search} » dans cette rubrique. Essayez un autre mot-clé.</div>
         )}
       </section>
 
