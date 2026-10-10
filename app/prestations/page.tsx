@@ -7,38 +7,10 @@ import { ArrowLeft, ArrowRight, Search, MessageCircle, Compass, Sparkles, Leaf, 
 const whatsapp = "https://chat.whatsapp.com/Dy7lky6MPzMCQun95YKOyc?s=cl&p=a&ilr=4&iam=2";
 
 const prestations = [
-  {
-    id: "consultation",
-    category: "ACCOMPAGNEMENT",
-    title: "Consultation spirituelle",
-    description: "Un temps d’écoute pour présenter votre demande et échanger dans le respect de vos convictions.",
-    icon: Compass,
-    label: "ÉCOUTE & ÉCHANGE",
-  },
-  {
-    id: "traditions",
-    category: "CULTURE & HÉRITAGE",
-    title: "Traditions ancestrales",
-    description: "Découvrez les traditions et les savoirs transmis, avec attention portée à leur diversité et à leur contexte culturel.",
-    icon: Sparkles,
-    label: "HÉRITAGE VIVANT",
-  },
-  {
-    id: "produits",
-    category: "INFORMATIONS",
-    title: "Produits traditionnels",
-    description: "Demandez des informations sur les produits proposés, leurs prix, leur utilisation et les précautions à connaître.",
-    icon: Leaf,
-    label: "PRODUITS TRADITIONNELS",
-  },
-  {
-    id: "protection",
-    category: "TRADITIONS",
-    title: "Protection symbolique",
-    description: "Échangez avec nous sur les objets et symboles de protection dans le cadre des traditions présentées.",
-    icon: ShieldCheck,
-    label: "SYMBOLES & TRADITIONS",
-  },
+  { id: "consultation", category: "ACCOMPAGNEMENT", title: "Consultation spirituelle", description: "", price: "", usage: "", icon: Compass, label: "ÉCOUTE & ÉCHANGE" },
+  { id: "traditions", category: "CULTURE & HÉRITAGE", title: "Traditions ancestrales", description: "", price: "", usage: "", icon: Sparkles, label: "HÉRITAGE VIVANT" },
+  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", title: "Savon DJOGBÉ", description: "", price: "", usage: "", icon: Leaf, label: "SAVON DJOGBÉ" },
+  { id: "protection", category: "TRADITIONS", title: "Protection symbolique", description: "", price: "", usage: "", icon: ShieldCheck, label: "SYMBOLES & TRADITIONS" },
 ];
 
 export default function PrestationsPage() {
@@ -47,7 +19,7 @@ export default function PrestationsPage() {
     const q = search.trim().toLocaleLowerCase("fr");
     if (!q) return prestations;
     return prestations.filter((item) =>
-      [item.title, item.description, item.category, item.label].some((value) =>
+      [item.title, item.description, item.category, item.label, item.usage].some((value) =>
         value.toLocaleLowerCase("fr").includes(q)
       )
     );
@@ -68,24 +40,16 @@ export default function PrestationsPage() {
       <section className="catalog-heading services-catalog-heading">
         <span className="catalog-eyebrow"><i /> NOS SERVICES <i /></span>
         <h1>Toutes nos <em>prestations</em></h1>
-        <p>Découvrez nos domaines d’accompagnement et contactez-nous pour obtenir des informations complémentaires.</p>
+        <p>Découvrez nos prestations. Les descriptions, prix et modes d’utilisation restent à compléter.</p>
       </section>
 
       <section className="services-catalog-search" aria-label="Rechercher une prestation">
         <Search size={21} />
-        <input
-          type="search"
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-          placeholder="Rechercher une prestation..."
-          aria-label="Rechercher une prestation"
-        />
+        <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Rechercher une prestation..." aria-label="Rechercher une prestation" />
       </section>
 
       <section className="services-catalog-list" aria-live="polite">
-        <div className="services-catalog-count">
-          {filtered.length} {filtered.length > 1 ? "prestations affichées" : "prestation affichée"}
-        </div>
+        <div className="services-catalog-count">{filtered.length} {filtered.length > 1 ? "prestations affichées" : "prestation affichée"}</div>
         {filtered.length ? (
           <div className="services-catalog-grid">
             {filtered.map((item, index) => {
@@ -100,7 +64,9 @@ export default function PrestationsPage() {
                   <div className="services-catalog-card-body">
                     <span className="services-catalog-category">{item.category}</span>
                     <h2>{item.title}</h2>
-                    <p>{item.description}</p>
+                    <p className="service-description">{item.description || "Description à compléter."}</p>
+                    <div className="service-detail-placeholder"><span>Prix</span><strong>{item.price || "________ FCFA"}</strong></div>
+                    <div className="service-usage"><strong>Mode d’utilisation</strong><p>{item.usage || "À compléter."}</p></div>
                     <a className="services-catalog-contact" href={whatsapp} target="_blank" rel="noopener noreferrer">
                       <MessageCircle size={17} /> Demander des informations <ArrowRight size={17} />
                     </a>
