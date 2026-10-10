@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, Search, MessageCircle, Compass, Sparkles, Leaf, ShieldCheck, SlidersHorizontal } from "lucide-react";
+import { ArrowLeft, ArrowRight, Search, MessageCircle, Compass, Sparkles, Leaf, ShieldCheck } from "lucide-react";
 
 const whatsapp = "https://chat.whatsapp.com/Dy7lky6MPzMCQun95YKOyc?s=cl&p=a&ilr=4&iam=2";
 
@@ -13,21 +13,15 @@ const prestations = [
   { id: "protection", category: "TRADITIONS", group: "Accompagnement", title: "Protection symbolique", description: "", price: "", usage: "", icon: ShieldCheck, label: "SYMBOLES & TRADITIONS" },
 ];
 
-const categories = ["Toutes", "Accompagnement", "Traditions", "Produits"];
-
 export default function PrestationsPage() {
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("Toutes");
-
   const filtered = useMemo(() => {
     const q = search.trim().toLocaleLowerCase("fr");
-    return prestations.filter((item) => {
-      const matchesCategory = category === "Toutes" || item.group === category;
-      const matchesSearch = !q || [item.title, item.description, item.category, item.label, item.usage, item.group]
-        .some((value) => value.toLocaleLowerCase("fr").includes(q));
-      return matchesCategory && matchesSearch;
-    });
-  }, [search, category]);
+    return prestations.filter((item) =>
+      !q || [item.title, item.description, item.category, item.label, item.usage, item.group]
+        .some((value) => value.toLocaleLowerCase("fr").includes(q))
+    );
+  }, [search]);
 
   return (
     <main className="catalog-page services-catalog-page">
@@ -55,14 +49,6 @@ export default function PrestationsPage() {
       <section className="services-catalog-list" aria-live="polite">
         <div className="services-catalog-toolbar">
           <div className="services-catalog-count">{filtered.length} {filtered.length > 1 ? "résultats" : "résultat"}</div>
-          <div className="services-catalog-filter-label"><SlidersHorizontal size={15} /> Filtrer par rubrique</div>
-        </div>
-        <div className="services-catalog-filters" role="group" aria-label="Filtrer par rubrique">
-          {categories.map((item) => (
-            <button key={item} type="button" className={category === item ? "services-catalog-filter active" : "services-catalog-filter"} onClick={() => setCategory(item)} aria-pressed={category === item}>
-              {item}
-            </button>
-          ))}
         </div>
 
         {filtered.length ? (
