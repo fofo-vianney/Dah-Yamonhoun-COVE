@@ -8,6 +8,7 @@ const whatsapp = "https://chat.whatsapp.com/Dy7lky6MPzMCQun95YKOyc?s=cl&p=a&ilr=
 
 const prestations = [
   { id: "consultation", category: "ACCOMPAGNEMENT", group: "Accompagnement", title: "Consultation spirituelle", description: "", price: "", usage: "", icon: Compass, label: "ÉCOUTE & ÉCHANGE" },
+  { id: "savon-djogbe", category: "SAVON TRADITIONNEL", group: "Produits", title: "Savon DJOGBÉ", description: "Savon composé à base de connaissances traditionnelles ancestrales, conçu pour raviver votre chance.", price: "60 000 FCFA", usage: "Faire ses vœux avant de se laver avec le savon, tous les lundis matin et tous les vendredis matin, afin de voir ses vœux exaucés.", icon: Leaf, label: "SAVON DJOGBÉ" },
 ];
 
 export default function PrestationsPage() {
